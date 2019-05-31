@@ -1,0 +1,19 @@
+version: '2'
+services:
+  dev-env:
+    build:
+      context: .
+    working_dir: /app
+    volumes:
+      - .:/app:delegated
+      # - ~/.aws/:/root/.aws
+      # - ~/.gitconfig/:/root/.gitconfig
+    # environment:
+    #   - AWS_ACCESS_KEY_ID
+    #   - AWS_SECRET_ACCESS_KEY
+    #   - AWS_PROFILE
+    #   - AWS_SESSION_TOKEN
+    #   - AWS_SECURITY_TOKEN
+    #   - SNYK_TOKEN
+    entrypoint:
+      - sh
